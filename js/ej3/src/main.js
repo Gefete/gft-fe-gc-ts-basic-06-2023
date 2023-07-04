@@ -22,10 +22,10 @@ for (let i = 0; i < electrodomesticos.length; i++) {
     if (electrodomesticos[i] instanceof Lavadora) {
         sumatotallava += electrodomesticos[i].precioFinal();
     }
-    if (electrodomesticos[i] instanceof Television) {
+    else if (electrodomesticos[i] instanceof Television) {
         sumatotaltele += electrodomesticos[i].precioFinal();
     }
-    if (electrodomesticos[i] instanceof Electrodomestico) {
+    else if (electrodomesticos[i] instanceof Electrodomestico) {
         sumatotalelec += electrodomesticos[i].precioFinal();
     }
 }
@@ -33,7 +33,3 @@ console.log("Precio total Electrodomesticos " + sumatotalelec);
 console.log("Precio total Lavadoras " + sumatotallava);
 console.log("Precio total  Televisiones" + sumatotaltele);
 console.log("Precio total de todo " + sumatotal);
-//Instancia de clase Lavadora
-/* let lv1 = new Lavadora('X');
-console.log(lv1);
-console.log(lv1.getPrecioBase()); */ 
