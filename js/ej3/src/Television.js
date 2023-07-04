@@ -1,14 +1,17 @@
 "use strict";
-const deCarga = 5;
 //Clase Lavadora
-class Lavadora extends Electrodomestico {
+class Television extends Electrodomestico {
     //2-Constructor
     constructor(newConsumo) {
         super(newConsumo);
-        this.carga = deCarga;
+        this.resolucion = 20;
+        this.cuatroK = false;
     }
-    getCarga() {
-        return this.carga;
+    getResolucion() {
+        return this.resolucion;
+    }
+    getCuatroK() {
+        return this.cuatroK;
     }
     //3-Metodos Propios
     getPrecioBase() {
@@ -17,7 +20,10 @@ class Lavadora extends Electrodomestico {
     }
     precioFinal() {
         let precioTotal = super.precioFinal();
-        if (this.carga > 30) {
+        if (this.resolucion > 40) {
+            precioTotal = precioTotal * 0.3;
+        }
+        if (this.cuatroK) {
             precioTotal += 50;
         }
         return precioTotal;

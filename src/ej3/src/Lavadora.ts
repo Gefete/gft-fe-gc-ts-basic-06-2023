@@ -20,4 +20,12 @@ class Lavadora extends Electrodomestico{
         let precBase = super.getPrecioBase();
         return precBase;
     }
+
+    precioFinal(): number {
+        let precioTotal = super.precioFinal();
+        if (this.carga > 30){
+            precioTotal += 50;
+        }
+        return precioTotal;
+    }
 }
