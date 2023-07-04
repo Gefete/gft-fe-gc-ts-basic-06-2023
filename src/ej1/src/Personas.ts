@@ -26,6 +26,6 @@ class Persona {
 
     //3-Métodos propios
     saluda(){
-        console.log(`Hola mundo ${this.nombre}`);
+        console.log(`Hola mundo ${this.nombre} esta presente`);
     }
 }

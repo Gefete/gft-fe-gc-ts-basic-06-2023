@@ -57,4 +57,39 @@ class Electrodomestico{
                 break;
         }
     }
+    precioFinal():number{
+        let incrementPrice:number=0;
+        switch (this.consumo) {
+            case 'A':
+                incrementPrice += 100;
+                break;
+            case 'B':
+                incrementPrice += 80;
+                break;
+            case 'C':
+                incrementPrice += 60;
+                break;
+            case 'D':
+                incrementPrice += 50;
+                break;
+            case 'E':
+                incrementPrice += 30;
+                break;
+            default:
+                incrementPrice += 10;
+                break;
+        }
+    
+        if(this.peso >= 0 && this.peso <= 19){
+            incrementPrice += 10;
+        }else if(this.peso >= 20 && this.peso <= 49){
+            incrementPrice += 50;
+        }else if(this.peso >= 50 && this.peso <= 79){
+            incrementPrice += 80;
+        }else{
+            incrementPrice += 100;
+        }
+
+        return this.preciobase + incrementPrice;
+    }
 }
